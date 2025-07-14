@@ -1,0 +1,17 @@
+# YOLO Dataset Training Configuration
+
+# Paths
+train: DatasetYOLO/images/train  # Path to training images
+val: DatasetYOLO/images/val      # Path to validation images
+
+# Classes
+nc: 35                          # Number of classes
+names: [
+  'Capot', 'Radiateur', 'Pare-chocs avant', 'Pare-chocs arrière', 'Aile avant', 'Aile arrière', 
+  'Phares', 'Porte avant', 'Porte arrière', 'Fenêtre avant', 'Fenêtre arrière', 'Plancher', 
+  'Pare-brise', 'Vitres latérales', 'Toit', 'Pneus avant', 'Pneus arrière', 'Jantes', 
+  'Roues', 'Moteur', 'Transmission', 'Suspension avant', 'Suspension arrière', 'Arbre de transmission', 
+  'Essieu avant', 'Essieu arrière', 'Boîte de vitesses', 'Direction', 'Freins avant', 'Freins arrière', 
+  'Batterie', 'Fissure', 'Bosses', 'Rayures', 'Peinture écaillée'
+]  # Class names
+

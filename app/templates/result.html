@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Résultats de la détection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Résultats de la détection</h1>
+    <h2>Image uploadée :</h2>
+    <img src="{{ url_for('static', filename=uploaded_image.split('static/')[1]) }}" alt="Uploaded Image" width="500">
+    <h2>Image avec les résultats :</h2>
+    <!-- Use the correct result image path -->
+    <img src="{{ url_for('static', filename=detections['result_image'].split('static/')[1]) }}" alt="Result Image" width="500">
+    <h2>Détections :</h2>
+    <ul>
+        {% for box, score, class_id in zip(detections['boxes'], detections['scores'], detections['class_ids']) %}
+        <li>Boîte : {{ box }}, Score : {{ score }}, Classe : {{ class_id }}</li>
+        {% endfor %}
+    </ul>
+    <a href="/">Retour</a>
+</body>
+</html>

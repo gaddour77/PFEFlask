@@ -1,0 +1,16 @@
+# Virtual environment
+venv/
+.venv/
+env/
+ENV/
+
+# Python cache and other files to ignore
+__pycache__/
+*.py[cod]
+*$py.class
+.python-version
+
+# Flask specific
+instance/
+.env
+.flaskenv
